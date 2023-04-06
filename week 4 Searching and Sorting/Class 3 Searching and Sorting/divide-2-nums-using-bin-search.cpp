@@ -1,11 +1,14 @@
 
 
-#include<iostream>
+#include<bits/stdc++.h>
+
 using namespace std;
 
 int divide (int dividend, int divisor){
 
-    if(divisor==0)return -1;
+    if(divisor==0 || (dividend == INT_MIN && divisor == -1)) return INT_MAX;
+    if(divisor==0 || (dividend == INT_MIN && divisor == 1)) return INT_MIN;
+
 
     int s = 0;
     int e = abs(dividend);
@@ -42,8 +45,8 @@ int divide (int dividend, int divisor){
 
 int main(){
 
-    int dividend = -54;
-    int divisor = 4;
+    int dividend = INT_MIN;
+    int divisor = -1;,
 
     int ans = divide(dividend, divisor);
 
