@@ -41,5 +41,8 @@ int main(){
     str.erase(6, 3) ;
     cout << str << endl;
 
+    int a = '0';
+    cout <<a <<endl;
+
     return 0;
 }
