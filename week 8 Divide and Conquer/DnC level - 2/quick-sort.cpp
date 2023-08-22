@@ -22,16 +22,30 @@ int partition(int* arr, int s, int e){
 
     pivotIndex = rightIndex;
 
-
     // now check the wrongly placed elements
     int i = s;
     int j = e;
 
-    while( i < pivotElement && j > pivotIndex ){
-        while(arr[i] <= pivotElement ) i++;
-        while(arr[j] > pivotElement) j--;
-        swap(arr[i], arr[j]);
+    while( i < pivotIndex && j > pivotIndex ){
+
+        while(arr[i] <= pivotElement ) {
+
+            i++;
+        }
+
+        while(arr[j] > pivotElement) {
+            j--;
+        }
+
+
+        // check if it exceeds the pivotindex in respective direction
+        if( i < pivotIndex && j > pivotIndex){
+
+        swap(arr[i++], arr[j--]);
+        }
     }
+
+
 
     return pivotIndex;
 
