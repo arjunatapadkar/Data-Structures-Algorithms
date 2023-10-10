@@ -31,7 +31,7 @@ void generateParantheses(vector<string> &ans, int open, int close, string str){
 int main(){
 
 
-    int n = 5;
+    int n = 3;
     int open = n, close = n;
     string str = "";
     vector<string> ans  ;
